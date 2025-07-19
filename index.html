@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Mantenimiento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div contenteditable="true" class="editable-title">Titulo de Registro(toca para editar)</div>
+  <div class="table-container">
+    <table id="registro">
+      <thead>
+        <tr>
+          <th>Tareas / Equipos</th>
+          <th contenteditable="true">Aire 1#</th>
+          <th contenteditable="true">heladera 2#</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th contenteditable="true">Fecha</th>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+        </tr>
+        <tr>
+          <th contenteditable="true">Mantenimiento partes</th>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+        </tr>
+        <tr>
+          <th contenteditable="true">limpieza</th>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+        </tr>
+        <tr>
+          <th contenteditable="true">Mantenimiento electrico</th>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="buttons">
+    <button onclick="agregarAparato()">Agregar Aparato</button>
+    <button onclick="agregarTarea()">Agregar Tarea</button>
+    <button onclick="guardarComoCSV()">Guardar como CSV</button>
+    <button onclick="eliminarUltimoAparato()">Eliminar Último Aparato</button>
+    <button onclick="eliminarUltimaTarea()">Eliminar Última Tarea</button>
+    <button onclick="guardarComoJSON()">Guardar como JSON</button>
+    <label class="upload-btn">
+  Cargar JSON
+  <input type="file" accept=".json" onchange="cargarDesdeJSON(this)">
+  </label>
+  </div>
+  <script src="lista.js"></script>
+</body>
+</html>
